@@ -1,0 +1,130 @@
+---
+import { imageConfig } from 'astro:assets'
+import img from '../assets/images/img2service.webp'
+import img1 from '../assets/images/img9service.webp'
+import img2 from '../assets/images/img1service.webp'
+import img3 from '../assets/images/img6service.webp'
+import img4 from '../assets/images/img5service.webp'
+import img5 from '../assets/images/img10service.webp'
+import ServiciosCard from './ServiciosCard.astro'
+---
+<section class="bg-service-font bg-cover bg-center bg-fixed min-h-screen mx-auto flex justify-center items-center transition-all py-16  text-[#F5F5C6] flex-col">
+   
+    
+    <div class="animate-fade 
+                animate-once 
+                animate-delay-[500ms]  w-full px-5 gap-8  flex flex-col max-w-5xl">
+
+        <div class="flex items-center gap-3 justify-end">
+            <p class="text-xs lg:text-sm">Servicios</p>
+            <div class="w-10 h-0 border border-[#F5F5C6]"></div>
+        </div>
+        <p class="text-xs lg:text-lg text-balance text-right">
+            En M&M Multi-Servicios Piura, ofrecemos soluciones completas en construcción, mantenimiento, reparaciones, limpieza y gestión de instalaciones. Garantizamos calidad y eficiencia para que puedas concentrarte en lo importante.
+        </p>
+
+        <div class="grid gap-5 md:grid-cols-2 md:grid-rows-4 ">
+
+            <ServiciosCard title='Instalaciones y Mantenimiento'
+            image={img.src}
+            estilos='md:row-span-2'>
+                <ul class="list-disc ml-3 ">
+                   <li>Instalación de Agua y Desagüe
+                </li>
+                   <li>Instalación de Medidores de Agua y Suministros de Instalación de Válvulas
+                </li>
+                   <li>Rehabilitación de Agua, Mejoramiento de Redes de Agua Potable (AP)
+                </li>
+                   <li>Mantenimiento, Limpieza y Desinfección de Reservorios
+                </li>
+                   <li>Mantenimiento de Áreas Verdes
+                </li>
+                   <li>Instalaciones Eléctricas en General
+                </li>
+                   <li>Instalación de Drywall y Melamina en General
+                </li>
+                   <li>Instalación de Centros de Computación y Redes
+                </li>
+                   <li>Trabajos de Gasfitería en General
+                </li>
+                   <li>Perforación y Mantenimiento de Pozos Tubulares
+                </li>
+                   <li>Trabajos de Soldadura y Estructuras Metálicas, Diseño e Instalación
+                </li>
+                </ul>
+            </ServiciosCard>
+
+            <ServiciosCard title='Construcción y Obras Civiles'
+            image={img1.src}
+            estilos=''>
+                <ul class="list-disc ml-3">
+                    <li>Elaboración y Evaluación de Expedientes Técnicos</li>
+                    <li>Construcción y Ejecución de Obras Civiles y Saneamiento</li>
+                    <li>Excavación de Terrenos, Tendido de Tuberías</li>
+                    <li>Reposición de Pistas y Veredas</li>
+                    <li>Construcción de Canales de Irrigación, Limpieza y Descolmatación</li>
+                </ul>
+            </ServiciosCard>
+
+            
+
+            <ServiciosCard title='Consultoría y Peritaje'
+            image={img2.src}
+            estilos=''>
+                <ul class="list-disc ml-3">
+                    <li>Consultorías en General
+                    </li>
+                    <li>Saneamiento, Tasaciones y Peritaje de Terrenos
+                    </li>
+                </ul>
+            </ServiciosCard>
+
+            <ServiciosCard title='Servicios Especializados'
+            image={img5.src}
+            estilos='md:row-span-2 md:col-start-2'>
+                <ul class="list-disc ml-3">
+                    <li>Lectura de Medidores de Agua
+                    </li>
+                    <li>Venta y Comercialización de Todo Tipo de EPP Industrial y de Bioseguridad
+                    </li>
+                    <li>Implementación de Redes de Computación
+                    </li>
+                    <li>Venta de Repuestos para Camiones, Autos, Buses
+                    </li>
+                    <li>Venta de Herramientas y Equipos de Construcción en General
+                    </li>
+                    <li>Venta de Útiles de Oficina y Librería en General
+                    </li>
+                </ul>
+            </ServiciosCard>
+
+            <ServiciosCard title='Servicios de Venta y Distribución'
+            image={img4.src}
+            estilos='md:row-start-3'>
+                <ul class="list-disc ml-3">
+                    <li>Venta de Abarrotes en General
+                    </li>
+                    <li>Distribución de Bebidas en General y Agua de Mesa por Mayor y Menor
+                    </li>
+                </ul>
+            </ServiciosCard>
+
+            <ServiciosCard title='Pintura y Rehabilitación'
+            image={img3.src}
+            estilos=''>
+                <ul class="list-disc ml-3">
+                    <li>Pintado y Resane de Todo Tipo de Edificaciones
+                    </li>
+                    <li>Mantenimiento de Muros, Columnas, Techos, Interiores y Exteriores
+                    </li>
+                    <li>
+                        Mantenimiento de Pintura a Todo Costo o Solo Mano de Obra
+                    </li>
+                </ul>
+            </ServiciosCard>
+        </div>
+    </div>
+
+   
+</section>
+

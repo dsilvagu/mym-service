@@ -1,0 +1,12 @@
+---
+interface Props {
+    text : string
+}
+
+const {text} = Astro.props;
+---
+
+<div class=" bg-[#F5F5C6]/80 backdrop-blur-sm rounded-2xl size-24 flex items-center justify-center relative overflow-hidden flex-col-reverse gap-1 delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0" data-taos-offset="400">
+    <p class="text-xs text-[#326765]  rounded-xl">{text}</p>
+    <slot/>
+</div>

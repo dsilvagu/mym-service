@@ -1,0 +1,20 @@
+---
+interface Props {
+    title :string,
+    image: string,
+    estilos: string
+}
+
+const {title, image, estilos} = Astro.props;
+---
+<div class:list={estilos} class="backdrop-blur-sm flex flex-col-reverse bg-[#F5F5C6]/90 text-[#F5F5C6] rounded-3xl overflow-hidden">
+    <div class=" text-xs p-4 flex flex-col gap-3 text-[#27253D]">
+        <p class="text-lg lg:text-xl text-[#7DA87B]">{title}</p>
+        <slot />
+    </div>
+    <div class="bg-[#7DA87B]  rounded-ee-full overflow-hidden flex flex-1">
+        <div class="h-40 lg:text-sm">
+            <img class="object-cover " src={image} alt="">
+        </div>
+    </div>
+</div>

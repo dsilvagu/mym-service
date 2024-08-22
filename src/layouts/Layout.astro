@@ -1,0 +1,32 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import '@fontsource/prompt';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="M&M Multi-Servicios Piura" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo2.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script>document.documentElement.classList.add('js')</script>
+	</head>
+	<body class="mx-auto font-prompt bg-[#326765]">
+		<Header />
+		<slot />
+		<Footer />
+		<script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+	</body>
+	
+</html>
+
